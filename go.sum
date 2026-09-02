@@ -1,0 +1,4 @@
+goark.dev/observe v0.0.0-20260902005121-bfd1b0de0c99 h1:5SXm3jMUJ/z9twtLnvctAOC0/sPqi1HNyjhzMxK+2NQ=
+goark.dev/observe v0.0.0-20260902005121-bfd1b0de0c99/go.mod h1:mtoNe8O+rpszCLrlcX+lWHfOG+tNff+N/B1FHBAxs+0=
+goark.dev/observe-sdk v0.0.0-20260902104503-b7f0711cb178 h1:AUS0uqHwFpgDf0Hu03NyaTOGq9DIOoQuUvbFGc6P9RU=
+goark.dev/observe-sdk v0.0.0-20260902104503-b7f0711cb178/go.mod h1:P5/apkxnVEQjEn/UXipUuYzvsAWJDsX8FmSOxt8FZvs=
