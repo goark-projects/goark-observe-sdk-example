@@ -3,9 +3,10 @@ package consoleexporter
 
 import (
 	"context"
-	"encoding/json"
 	"io"
 	"sync"
+
+	"github.com/bytedance/sonic"
 
 	"goark.dev/observe"
 )
@@ -13,7 +14,7 @@ import (
 // Exporter 把四类观测信号以 JSON 行写入目标输出。
 type Exporter struct {
 	mu      sync.Mutex
-	encoder *json.Encoder
+	encoder sonic.Encoder
 }
 
 type record struct {
@@ -36,7 +37,7 @@ func New(writer io.Writer) *Exporter {
 	if writer == nil {
 		writer = io.Discard
 	}
-	return &Exporter{encoder: json.NewEncoder(writer)}
+	return &Exporter{encoder: sonic.ConfigFastest.NewEncoder(writer)}
 }
 
 // Descriptor 返回示例 exporter 的稳定能力描述。

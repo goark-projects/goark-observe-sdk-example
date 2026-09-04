@@ -2,9 +2,10 @@ package example_test
 
 import (
 	"bytes"
-	"encoding/json"
 	"strings"
 	"testing"
+
+	"github.com/bytedance/sonic"
 
 	"github.com/goark-projects/goark-observe-sdk-example/internal/example"
 )
@@ -26,7 +27,7 @@ func TestRunExportsAllSignalsWithTraceCorrelation(t *testing.T) {
 	var correlatedTraceIDs []string
 	for _, line := range strings.Split(strings.TrimSpace(output.String()), "\n") {
 		var item record
-		if err := json.Unmarshal([]byte(line), &item); err != nil {
+		if err := sonic.Unmarshal([]byte(line), &item); err != nil {
 			t.Fatalf("invalid JSON line %q: %v", line, err)
 		}
 		counts[item.Signal]++
