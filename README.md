@@ -6,7 +6,7 @@ This project is a runnable reference for `goark.dev/observe-sdk`. It creates a p
 
 ## Requirements
 
-- Go 1.25 or later
+- Go 1.26 or later
 - Bytedance Sonic is the only JSON implementation used by the example.
 
 ## Run
